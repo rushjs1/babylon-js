@@ -13,7 +13,14 @@ engine.runRenderLoop(function(){
     scene.render();
 });
 
+scene.registerAfterRender(function(){
 
+    if(ball.intersectsMesh(tower, false)){
+        console.log("goal");
+        
+    }
+
+})
 
 
 
